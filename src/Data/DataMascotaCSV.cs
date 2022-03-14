@@ -1,16 +1,18 @@
 using System;
-using Modelos;
+
 using System.Collections.Generic;
 
 using System.IO;
 using System.Linq;
+using Modelos;
+
 
 namespace Data{
     public class DataMascotaCVS : IData
     {
        string _file = "../../dataMascota.csv";
 
-       public void guardarSocio(List<Mascota> mascotas){
+       public void Guardar(List<Mascota> mascotas){
            List<string> data = new(){ };
            mascotas.ForEach(Mascota =>
            {
@@ -21,9 +23,9 @@ namespace Data{
         
        }
 
-       public List<Socio> Leer()
+       public List<Mascota> Leer()
         {
-            List<Socio> mascotas = new();
+            List<Mascota> mascotas = new();
             var data = File.ReadAllLines(_file).ToList();
             data.ForEach(row =>
             {
