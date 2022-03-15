@@ -8,7 +8,7 @@ using Modelos;
 
 
 namespace Data{
-    public class DataMascotaCVS : IData
+    public class DataMascotaCVS : IData<Mascota>
     {
        string _file = "../../dataMascota.csv";
 

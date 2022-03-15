@@ -8,10 +8,10 @@ using System.Linq;
 using Modelos;
 namespace Data
 {
-    public interface IData
+    public interface IData<T>
     {
-        void Guardar(List<Object> elem );
-        List<Object> Leer();
+        void Guardar(List<T> elem );
+        List<T> Leer();
     }
 
 }

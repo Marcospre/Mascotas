@@ -8,7 +8,7 @@ using System.Linq;
 using Modelos;
 
 namespace Data{
-    public class DataSocioCVS : IData
+    public class DataSocioCVS : IData<Socio>
     {
        string _file = "../../dataSocio.csv";
 
