@@ -4,7 +4,7 @@ using System.Linq;
 using System.ComponentModel;
 using static System.Console;
 
-namespace Sanitaria.UI.Consola
+namespace Consola
 {
     public class Vista
     {
@@ -184,6 +184,16 @@ namespace Sanitaria.UI.Consola
                     Mostrar($"Error: '{input}' no reconocido como valor permitido en {opciones}", ConsoleColor.DarkRed);
                 }
             }
+        }
+        public string obtenerEspecieEdad(){
+            string input;
+            var msg = "Seleccione ordenar por especie(s) o edad(e):";
+            Write(msg);
+            do{
+                input = ReadLine();
+            }while(!input.Equals("e") && !input.Equals("s"));
+
+            return input;
         }
     
     }

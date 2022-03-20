@@ -1,20 +1,76 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\1daw3\\Documents\\ED\\Mascotas\\src\\Data\\Data.csproj": {}
+    "C:\\Users\\Marcos\\Documents\\DAW\\ED\\Mascotas\\src\\Data\\Data.csproj": {}
   },
   "projects": {
-    "C:\\Users\\1daw3\\Documents\\ED\\Mascotas\\src\\Data\\Data.csproj": {
+    "C:\\Users\\Marcos\\Documents\\DAW\\ED\\Mascotas\\src\\Data\\Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\1daw3\\Documents\\ED\\Mascotas\\src\\Data\\Data.csproj",
+        "projectUniqueName": "C:\\Users\\Marcos\\Documents\\DAW\\ED\\Mascotas\\src\\Data\\Data.csproj",
         "projectName": "Data",
-        "projectPath": "C:\\Users\\1daw3\\Documents\\ED\\Mascotas\\src\\Data\\Data.csproj",
-        "packagesPath": "C:\\Users\\1daw3\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\1daw3\\Documents\\ED\\Mascotas\\src\\Data\\obj\\",
+        "projectPath": "C:\\Users\\Marcos\\Documents\\DAW\\ED\\Mascotas\\src\\Data\\Data.csproj",
+        "packagesPath": "C:\\Users\\Marcos\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Marcos\\Documents\\DAW\\ED\\Mascotas\\src\\Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\1daw3\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Marcos\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\Marcos\\Documents\\DAW\\ED\\Mascotas\\src\\Modelos\\Modelos.csproj": {
+                "projectPath": "C:\\Users\\Marcos\\Documents\\DAW\\ED\\Mascotas\\src\\Modelos\\Modelos.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Marcos\\Documents\\DAW\\ED\\Mascotas\\src\\Modelos\\Modelos.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Marcos\\Documents\\DAW\\ED\\Mascotas\\src\\Modelos\\Modelos.csproj",
+        "projectName": "Modelos",
+        "projectPath": "C:\\Users\\Marcos\\Documents\\DAW\\ED\\Mascotas\\src\\Modelos\\Modelos.csproj",
+        "packagesPath": "C:\\Users\\Marcos\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Marcos\\Documents\\DAW\\ED\\Mascotas\\src\\Modelos\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Marcos\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -52,7 +108,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
         }
       }
     }

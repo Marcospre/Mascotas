@@ -23,6 +23,17 @@ namespace App
             RepoMascota.Guardar(Mascotas);
         }
 
+        public void CambiarSocio(string id_masco, string id_SocioNuevo)
+        {
+            foreach(Mascota elem in Mascotas)
+            {
+                if(elem.idSocio == id_masco){
+                    elem.idSocio = id_SocioNuevo;
+                }
+            }
+            RepoMascota.Guardar(Mascotas);
+        }
+
 
 
     }

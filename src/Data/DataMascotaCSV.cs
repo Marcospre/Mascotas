@@ -10,7 +10,7 @@ using Modelos;
 namespace Data{
     public class DataMascotaCVS : IData<Mascota>
     {
-       string _file = "../../dataMascota.csv";
+       string _file = "C:/Users/Marcos/Documents/DAW/ED/Mascotas/datoMascota.csv";
 
        public void Guardar(List<Mascota> mascotas){
            List<string> data = new(){ };
@@ -34,7 +34,7 @@ namespace Data{
                 {
                     nombre = campos[0],
                     especie =  campos[1],
-                    edad = campos[2],
+                    edad = Int32.Parse(campos[2]),
                     idSocio = campos[3]
                 };
                 mascotas.Add(mascota);

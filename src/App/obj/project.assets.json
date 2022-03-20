@@ -1,26 +1,64 @@
 {
   "version": 3,
   "targets": {
-    "net5.0": {}
+    "net5.0": {
+      "Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Modelos": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Data.dll": {}
+        }
+      },
+      "Modelos/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/Modelos.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Modelos.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Data/1.0.0": {
+      "type": "project",
+      "path": "../Data/Data.csproj",
+      "msbuildProject": "../Data/Data.csproj"
+    },
+    "Modelos/1.0.0": {
+      "type": "project",
+      "path": "../Modelos/Modelos.csproj",
+      "msbuildProject": "../Modelos/Modelos.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net5.0": []
+    "net5.0": [
+      "Data >= 1.0.0",
+      "Modelos >= 1.0.0"
+    ]
   },
   "packageFolders": {
-    "C:\\Users\\1daw3\\.nuget\\packages\\": {}
+    "C:\\Users\\Marcos\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\1daw3\\Documents\\ED\\Mascotas\\src\\App\\App.csproj",
+      "projectUniqueName": "C:\\Users\\Marcos\\Documents\\DAW\\ED\\Mascotas\\src\\App\\App.csproj",
       "projectName": "App",
-      "projectPath": "C:\\Users\\1daw3\\Documents\\ED\\Mascotas\\src\\App\\App.csproj",
-      "packagesPath": "C:\\Users\\1daw3\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\1daw3\\Documents\\ED\\Mascotas\\src\\App\\obj\\",
+      "projectPath": "C:\\Users\\Marcos\\Documents\\DAW\\ED\\Mascotas\\src\\App\\App.csproj",
+      "packagesPath": "C:\\Users\\Marcos\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Marcos\\Documents\\DAW\\ED\\Mascotas\\src\\App\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\1daw3\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Marcos\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -31,7 +69,14 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Marcos\\Documents\\DAW\\ED\\Mascotas\\src\\Data\\Data.csproj": {
+              "projectPath": "C:\\Users\\Marcos\\Documents\\DAW\\ED\\Mascotas\\src\\Data\\Data.csproj"
+            },
+            "C:\\Users\\Marcos\\Documents\\DAW\\ED\\Mascotas\\src\\Modelos\\Modelos.csproj": {
+              "projectPath": "C:\\Users\\Marcos\\Documents\\DAW\\ED\\Mascotas\\src\\Modelos\\Modelos.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -58,7 +103,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
       }
     }
   }
