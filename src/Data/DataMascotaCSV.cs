@@ -10,7 +10,7 @@ using Modelos;
 namespace Data{
     public class DataMascotaCVS : IData<Mascota>
     {
-       string _file = "C:/Users/Marcos/Documents/DAW/ED/Mascotas/datoMascota.csv";
+       string _file = "../../datoMascota.csv";
 
        public void Guardar(List<Mascota> mascotas){
            List<string> data = new(){ };

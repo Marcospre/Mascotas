@@ -66,38 +66,40 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Marcos\\.nuget\\packages\\": {}
+    "C:\\Users\\1daw3\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Marcos\\Documents\\DAW\\ED\\Mascotas\\src\\Consola\\Consola.csproj",
+      "projectUniqueName": "C:\\Users\\1daw3\\Documents\\ED\\Mascotas\\src\\Consola\\Consola.csproj",
       "projectName": "Consola",
-      "projectPath": "C:\\Users\\Marcos\\Documents\\DAW\\ED\\Mascotas\\src\\Consola\\Consola.csproj",
-      "packagesPath": "C:\\Users\\Marcos\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Marcos\\Documents\\DAW\\ED\\Mascotas\\src\\Consola\\obj\\",
+      "projectPath": "C:\\Users\\1daw3\\Documents\\ED\\Mascotas\\src\\Consola\\Consola.csproj",
+      "packagesPath": "C:\\Users\\1daw3\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\1daw3\\Documents\\ED\\Mascotas\\src\\Consola\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Marcos\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\1daw3\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\Marcos\\Documents\\DAW\\ED\\Mascotas\\src\\App\\App.csproj": {
-              "projectPath": "C:\\Users\\Marcos\\Documents\\DAW\\ED\\Mascotas\\src\\App\\App.csproj"
+            "C:\\Users\\1daw3\\Documents\\ED\\Mascotas\\src\\App\\App.csproj": {
+              "projectPath": "C:\\Users\\1daw3\\Documents\\ED\\Mascotas\\src\\App\\App.csproj"
             },
-            "C:\\Users\\Marcos\\Documents\\DAW\\ED\\Mascotas\\src\\Data\\Data.csproj": {
-              "projectPath": "C:\\Users\\Marcos\\Documents\\DAW\\ED\\Mascotas\\src\\Data\\Data.csproj"
+            "C:\\Users\\1daw3\\Documents\\ED\\Mascotas\\src\\Data\\Data.csproj": {
+              "projectPath": "C:\\Users\\1daw3\\Documents\\ED\\Mascotas\\src\\Data\\Data.csproj"
             },
-            "C:\\Users\\Marcos\\Documents\\DAW\\ED\\Mascotas\\src\\Modelos\\Modelos.csproj": {
-              "projectPath": "C:\\Users\\Marcos\\Documents\\DAW\\ED\\Mascotas\\src\\Modelos\\Modelos.csproj"
+            "C:\\Users\\1daw3\\Documents\\ED\\Mascotas\\src\\Modelos\\Modelos.csproj": {
+              "projectPath": "C:\\Users\\1daw3\\Documents\\ED\\Mascotas\\src\\Modelos\\Modelos.csproj"
             }
           }
         }
@@ -121,12 +123,18 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[5.0.15, 5.0.15]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }
