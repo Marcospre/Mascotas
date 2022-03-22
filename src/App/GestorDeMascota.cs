@@ -27,9 +27,11 @@ namespace App
         {
             foreach(Mascota elem in Mascotas)
             {
-                if(elem.idSocio == id_masco){
-                    elem.idSocio = id_SocioNuevo;
+                if(elem.idMascosta == id_masco){
+                    if(elem.idSocio != id_SocioNuevo)
+                         elem.idSocio = id_SocioNuevo;
                 }
+                
             }
             RepoMascota.Guardar(Mascotas);
         }

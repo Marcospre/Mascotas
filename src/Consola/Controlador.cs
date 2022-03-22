@@ -19,13 +19,13 @@ namespace Consola
             sistema_mascotas = gesMascotas;
             _casosDeUso = new Dictionary<string, Action>()
             {
-                {"Registrar nuevo socio", RegistrarSocio},
+                {"Registrar nuevo Socio", RegistrarSocio},
                 {"Registrar nueva Mascota",RegistrarMascota},
-                {"Eliminar socio",EliminarSocio},
-                {"Eliminar mascota",EliminarMascota},
-                {"Compra Mascota",compraMascota},
+                {"Eliminar Socio",EliminarSocio},
+                {"Eliminar Mascota",EliminarMascota},
+                {"Comprar Mascota",compraMascota},
                 {"Mostrar Mascotas ordenadas",ordenarMascotas},
-                {"Mostrar socios",MostrarSocios}
+                {"Mostrar Socios",MostrarSocios}
             };
         }
 
@@ -72,6 +72,7 @@ namespace Consola
         {
             try
             {
+                var id_mas = _vista.TryObtenerDatoDeTipo<string>("IDMascota");
                 var nom = _vista.TryObtenerDatoDeTipo<string>("Nombre");
                 var es = _vista.TryObtenerDatoDeTipo<string>("Especie");
                 var ed = _vista.TryObtenerDatoDeTipo<int>("Edad");
@@ -79,13 +80,14 @@ namespace Consola
 
                 Mascota nuevaMascota = new Mascota
                 {
+                    idMascosta = id_mas,
                     nombre = nom,
                     especie = es,
                     edad = ed,
                     idSocio = ids
                     
                 };
-                if(existeSocio(ids)){
+                if(existeSocio(ids,nuevaMascota)){
                     sistema_mascotas.NuevaMascota(nuevaMascota);
                 }else{
                     _vista.Mostrar($"No existe el socio al que se le asigna esta mascota");
@@ -96,12 +98,13 @@ namespace Consola
             }   
         }
 
-        private bool existeSocio(string id)
+        private bool existeSocio(string id, Mascota masco)
         {   
             bool dev = false;
             foreach(Socio elem in sistema_socios.Socios)
             {
                 if(elem.idSocio == id) 
+                    masco.nombre_socio = elem.nombre;
                     dev = true;
             } 
             return dev;
@@ -119,7 +122,7 @@ namespace Consola
                 //Ejecucion
                 sistema_socios.EliminarSocio(so);
                 //Info
-                _vista.Mostrar($"Informe baja entregado a {so.idSocio}");
+                _vista.Mostrar($"Informe baja entregado a {so.idSocio} de nombre {so.nombre}");
             }catch(Exception e)
             {
                 _vista.Mostrar($"UC: {e.Message}");
@@ -138,7 +141,7 @@ namespace Consola
                 //Ejecucion
                 sistema_mascotas.EliminarMascota(mas);
                 //Info
-                _vista.Mostrar($"Informe baja entregado a {mas.idMascosta}");
+                _vista.Mostrar($"Informe de baja entregado a {mas.idMascosta} de nombre {mas.nombre}");
             }catch(Exception e)
             {
                 _vista.Mostrar($"UC: {e.Message}");
@@ -152,24 +155,32 @@ namespace Consola
             MostrarMascotas();
             var id_masco_comprar = _vista.TryObtenerValorEnRangoInt(1,sistema_mascotas.Mascotas.Count, "Mascota a comprar");
             var masco = sistema_mascotas.Mascotas[id_masco_comprar-1];
-            sistema_mascotas.CambiarSocio(masco.idMascosta,comprador.idSocio);
+            if(comprador.idSocio != masco.idSocio){
+                sistema_mascotas.CambiarSocio(masco.idMascosta,comprador.idSocio);
+                _vista.Mostrar($"La mascota con id {masco.idMascosta} pertenece al comprador con id {comprador.idSocio} de nombre {comprador.nombre}");
+            }else{
+                _vista.Mostrar("No se puede vender una mascota al mismo vendedor");
+            }
 
         }
 
         public void ordenarMascotas()
         {
             string op = _vista.obtenerEspecieEdad();
+            String mensaje = null;
 
             if(op.Equals("e")){
+                mensaje = "Edad";
                 sistema_mascotas.Mascotas.Sort(delegate(Mascota x, Mascota y){
                     return x.edad.CompareTo(y.edad);
                 });
             }else{
+                mensaje = "Especie";
                 sistema_mascotas.Mascotas.Sort(delegate(Mascota x, Mascota y){
                     return x.especie.CompareTo(y.especie);
                 });
             }
-            _vista.Mostrar(sistema_mascotas.Mascotas);
+            _vista.MostrarListaEnumerada<Mascota>($"Ordenados por {mensaje}",sistema_mascotas.Mascotas);
         }
 
         private void MostrarSocios()
