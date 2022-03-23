@@ -71,10 +71,11 @@ namespace Consola
         private void RegistrarMascota()
         {
             try
-            {
+            {   
+                
                 var id_mas = _vista.TryObtenerDatoDeTipo<string>("IDMascota");
                 var nom = _vista.TryObtenerDatoDeTipo<string>("Nombre");
-                var es = _vista.TryObtenerDatoDeTipo<string>("Especie");
+                var es = _vista.TryObtenerDatoDeTipo<especie>("Especie");
                 var ed = _vista.TryObtenerDatoDeTipo<int>("Edad");
                 var ids = _vista.TryObtenerDatoDeTipo<string>("IDSocio");
 
@@ -174,13 +175,25 @@ namespace Consola
                 sistema_mascotas.Mascotas.Sort(delegate(Mascota x, Mascota y){
                     return x.edad.CompareTo(y.edad);
                 });
+                _vista.MostrarListaEnumerada<Mascota>($"Ordenados por {mensaje}",sistema_mascotas.Mascotas);
             }else{
-                mensaje = "Especie";
-                sistema_mascotas.Mascotas.Sort(delegate(Mascota x, Mascota y){
-                    return x.especie.CompareTo(y.especie);
-                });
+                
+                /*sistema_mascotas.Mascotas.Sort(delegate(Mascota x, Mascota y){
+                return x.especie.CompareTo(y.especie);
+                
+                });*/
+                var espe_ls = _vista.EnumToList<especie>();
+                var ele = _vista.TryObtenerElementoDeLista<especie>("Especies", espe_ls , "Indica la especie:");
+                
+                foreach(Mascota elem in sistema_mascotas.Mascotas){
+                    if(elem.especie == ele){
+                        //mensaje = mensaje + $"elem.ToString+\n";
+                        _vista.Mostrar(elem);
+                    }
+                }
+                
             }
-            _vista.MostrarListaEnumerada<Mascota>($"Ordenados por {mensaje}",sistema_mascotas.Mascotas);
+            
         }
 
         private void MostrarSocios()

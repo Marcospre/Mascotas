@@ -33,7 +33,7 @@ namespace Data{
                 var mascota = new Mascota
                 {
                     nombre = campos[0],
-                    especie =  campos[1],
+                    especie =  (especie)Enum.Parse(typeof(especie), campos[1]),
                     edad = Int32.Parse(campos[2]),
                     idSocio = campos[3]
                 };
