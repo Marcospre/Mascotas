@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\1daw3\\Documents\\ED\\Mascotas\\src\\Modelos\\Modelos.csproj": {}
+    "C:\\Users\\Marcos\\Documents\\DAW\\ED\\Mascotas\\src\\Modelos\\Modelos.csproj": {}
   },
   "projects": {
-    "C:\\Users\\1daw3\\Documents\\ED\\Mascotas\\src\\Modelos\\Modelos.csproj": {
+    "C:\\Users\\Marcos\\Documents\\DAW\\ED\\Mascotas\\src\\Modelos\\Modelos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\1daw3\\Documents\\ED\\Mascotas\\src\\Modelos\\Modelos.csproj",
+        "projectUniqueName": "C:\\Users\\Marcos\\Documents\\DAW\\ED\\Mascotas\\src\\Modelos\\Modelos.csproj",
         "projectName": "Modelos",
-        "projectPath": "C:\\Users\\1daw3\\Documents\\ED\\Mascotas\\src\\Modelos\\Modelos.csproj",
-        "packagesPath": "C:\\Users\\1daw3\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\1daw3\\Documents\\ED\\Mascotas\\src\\Modelos\\obj\\",
+        "projectPath": "C:\\Users\\Marcos\\Documents\\DAW\\ED\\Mascotas\\src\\Modelos\\Modelos.csproj",
+        "packagesPath": "C:\\Users\\Marcos\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Marcos\\Documents\\DAW\\ED\\Mascotas\\src\\Modelos\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\1daw3\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Marcos\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -54,7 +52,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -34,7 +34,7 @@ namespace Data{
                 {
                     idSocio = campos[0],
                     nombre =  campos[1],
-                    sexo = campos[2],
+                    sexo = (sexo)Enum.Parse(typeof(sexo), campos[2]),
                 };
                 socios.Add(socio);
             });

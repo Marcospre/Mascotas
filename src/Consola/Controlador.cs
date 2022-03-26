@@ -53,7 +53,7 @@ namespace Consola
             {
                 var id = _vista.TryObtenerDatoDeTipo<string>("ID Socio");
                 var nom = _vista.TryObtenerDatoDeTipo<string>("Nombre");
-                var sx = _vista.TryObtenerDatoDeTipo<string>("Sexo");
+                var sx = _vista.TryObtenerDatoDeTipo<sexo>("Sexo");
 
                 Socio nuevoSocio = new Socio
                 {
@@ -169,6 +169,7 @@ namespace Consola
         {
             string op = _vista.obtenerEspecieEdad();
             String mensaje = null;
+            bool existe = false;
 
             if(op.Equals("e")){
                 mensaje = "Edad";
@@ -185,11 +186,16 @@ namespace Consola
                 var espe_ls = _vista.EnumToList<especie>();
                 var ele = _vista.TryObtenerElementoDeLista<especie>("Especies", espe_ls , "Indica la especie:");
                 
+                
                 foreach(Mascota elem in sistema_mascotas.Mascotas){
                     if(elem.especie == ele){
                         //mensaje = mensaje + $"elem.ToString+\n";
-                        _vista.Mostrar(elem);
+                         _vista.Mostrar(elem);
+                         existe = true;
                     }
+                }
+                if(existe == false){
+                    _vista.Mostrar($"No hay Mascotas de la especie {ele}");
                 }
                 
             }
