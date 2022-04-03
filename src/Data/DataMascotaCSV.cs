@@ -16,7 +16,7 @@ namespace Data{
            List<string> data = new(){ };
            mascotas.ForEach(Mascota =>
            {
-               var str = $"{Mascota.nombre},{Mascota.especie},{Mascota.edad},{Mascota.idSocio}";
+               var str = $"{Mascota.idMascosta},{Mascota.nombre},{Mascota.especie},{Mascota.edad},{Mascota.idSocio},{Mascota.nombre_socio}";
                data.Add(str);
            });
            File.WriteAllLines(_file, data);
@@ -31,11 +31,15 @@ namespace Data{
             {
                 var campos = row.Split(",");
                 var mascota = new Mascota
-                {
-                    nombre = campos[0],
-                    especie =  (especie)Enum.Parse(typeof(especie), campos[1]),
-                    edad = Int32.Parse(campos[2]),
-                    idSocio = campos[3]
+                {   
+                    idMascosta = campos[0],
+                    nombre = campos[1],
+                    especie =  (especie)Enum.Parse(typeof(especie), campos[2]),
+                    edad = Int32.Parse(campos[3]),
+                    idSocio = campos[4],
+                    nombre_socio = campos[5]
+                    
+                    
                 };
                 mascotas.Add(mascota);
             });

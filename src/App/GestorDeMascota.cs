@@ -23,19 +23,26 @@ namespace App
             RepoMascota.Guardar(Mascotas);
         }
 
-        public void CambiarSocio(string id_masco, string id_SocioNuevo)
+        public void CambiarSocio(string id_masco, string id_SocioNuevo, string nombre_SocioNuveo)
         {
             foreach(Mascota elem in Mascotas)
             {
                 if(elem.idMascosta == id_masco){
-                    if(elem.idSocio != id_SocioNuevo)
+                    if(elem.idSocio != id_SocioNuevo){
                          elem.idSocio = id_SocioNuevo;
+                         elem.nombre_socio = nombre_SocioNuveo;
+                    }
                 }
                 
             }
             RepoMascota.Guardar(Mascotas);
         }
 
+        public void BorrarSocio(Mascota masco){
+            masco.idSocio = null;
+            masco.nombre_socio = null;
+            RepoMascota.Guardar(Mascotas);
+        }
 
 
     }
